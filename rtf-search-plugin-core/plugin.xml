@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="4.6"?>
+<plugin>
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            class="io.mathan.eclipse.search.rtf.RtfSearchPage"
+            id="io.mathan.eclipse.search.rtf.RtfSearchPage"
+            label="RichTextFiles (RTF)"
+            showScopeSection="false">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.search.searchResultViewPages">
+      <viewPage
+            class="io.mathan.eclipse.search.rtf.RtfSearchResultPage"
+            id="io.mathan.eclipse.search.rtf.RtfSearchResultPage"
+            searchResultClass="io.mathan.eclipse.search.rtf.RtfSearchResult">
+      </viewPage>
+   </extension>
+
+</plugin>

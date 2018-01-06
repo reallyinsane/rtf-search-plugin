@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<site>  
+   <category-def name="category" label="Search inside RTF for Eclipse"/>
+   <feature url="features/rtf-search-plugin-feature_0.0.1.qualifier.jar"
+id="rtf-search-plugin-feature">
+<category name="category" />
+</feature>
+  
+</site> 
