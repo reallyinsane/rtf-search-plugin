@@ -10,24 +10,22 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
 
 public class RtfSearchPage extends DialogPage implements ISearchPage {
+
   private RtfSearchPageComposite composite;
 
   public RtfSearchPage() {
-    // TODO Auto-generated constructor stub
   }
 
   public RtfSearchPage(String title) {
     super(title);
-    // TODO Auto-generated constructor stub
   }
 
   public RtfSearchPage(String title, ImageDescriptor image) {
     super(title, image);
-    // TODO Auto-generated constructor stub
   }
 
   public void createControl(Composite parent) {
-    composite = new  RtfSearchPageComposite(parent, SWT.FILL);
+    composite = new RtfSearchPageComposite(parent, SWT.FILL);
     setControl(composite);
   }
 
@@ -37,7 +35,7 @@ public class RtfSearchPage extends DialogPage implements ISearchPage {
   }
 
   private ISearchQuery newQuery() {
-    if(composite.isWorkspaceSearch()) {
+    if (composite.isWorkspaceSearch()) {
       return new RtfSearchQuery(composite.getContainingText());
     } else {
       return new RtfSearchQuery(composite.getContainingText(), composite.getFileSystemText());
@@ -45,8 +43,6 @@ public class RtfSearchPage extends DialogPage implements ISearchPage {
   }
 
   public void setContainer(ISearchPageContainer container) {
-    // TODO Auto-generated method stub
-
   }
 
 }

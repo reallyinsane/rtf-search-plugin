@@ -1,5 +1,6 @@
 package io.mathan.eclipse.search.rtf;
 
+import io.mathan.eclipse.search.rtf.RtfSearchResult.RtfSearchResultMatchEvent;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.search.ui.ISearchResult;
 import org.eclipse.search.ui.ISearchResultListener;
@@ -20,8 +21,6 @@ import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IMemento;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.IPageSite;
-
-import io.mathan.eclipse.search.rtf.RtfSearchResult.RtfSearchResultMatchEvent;
 
 public class RtfSearchResultPage implements ISearchResultPage {
 
@@ -74,17 +73,12 @@ public class RtfSearchResultPage implements ISearchResultPage {
   }
 
   public void setActionBars(IActionBars actionBars) {
-    // TODO Auto-generated method stub
-
   }
 
   public void setFocus() {
-    // TODO Auto-generated method stub
-
   }
 
   public Object getUIState() {
-    // TODO Auto-generated method stub
     return null;
   }
 
@@ -104,8 +98,8 @@ public class RtfSearchResultPage implements ISearchResultPage {
           Display.getDefault().asyncExec(new Runnable() {
             public void run() {
               TableItem item = new TableItem(table, SWT.NONE);
-              item.setText(new String[] { match.getName(),
-                  String.valueOf(match.getMatchContexts().size()) });
+              item.setText(new String[]{match.getName(),
+                  String.valueOf(match.getMatchContexts().size())});
               item.setData(match);
               table.setRedraw(true);
             }
@@ -116,23 +110,16 @@ public class RtfSearchResultPage implements ISearchResultPage {
   }
 
   public void setViewPart(ISearchResultViewPart part) {
-    // TODO Auto-generated method stub
-
   }
 
   public void restoreState(IMemento memento) {
-    // TODO Auto-generated method stub
-
   }
 
   public void saveState(IMemento memento) {
-    // TODO Auto-generated method stub
-
   }
 
   public void setID(String id) {
     this.id = id;
-
   }
 
   public String getID() {

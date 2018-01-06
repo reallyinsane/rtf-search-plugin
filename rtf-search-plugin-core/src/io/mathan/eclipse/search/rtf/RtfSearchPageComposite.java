@@ -14,6 +14,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 public class RtfSearchPageComposite extends Composite {
+
   private Text txtContainingText;
   private Text txtFileSystem;
   private Button radWorkspace;
@@ -22,9 +23,6 @@ public class RtfSearchPageComposite extends Composite {
 
   /**
    * Create the composite.
-   * 
-   * @param parent
-   * @param style
    */
   public RtfSearchPageComposite(Composite parent, int style) {
     super(parent, style);
@@ -104,6 +102,6 @@ public class RtfSearchPageComposite extends Composite {
   }
 
   public boolean isWorkspaceSearch() {
-    return radWorkspace == null ? true : radWorkspace.getSelection();
+    return radWorkspace == null || radWorkspace.getSelection();
   }
 }

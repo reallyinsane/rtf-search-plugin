@@ -2,7 +2,6 @@ package io.mathan.eclipse.search.rtf;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.search.ui.ISearchQuery;
 import org.eclipse.search.ui.ISearchResult;
@@ -60,6 +59,7 @@ public class RtfSearchResult implements ISearchResult {
   }
 
   public static class RtfSearchResultMatchEvent extends SearchResultEvent {
+
     private RtfSearchResultMatch match;
 
     protected RtfSearchResultMatchEvent(ISearchResult searchResult,

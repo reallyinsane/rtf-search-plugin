@@ -2,7 +2,6 @@ package io.mathan.eclipse.search.rtf;
 
 import java.awt.Desktop;
 import java.io.IOException;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Status;

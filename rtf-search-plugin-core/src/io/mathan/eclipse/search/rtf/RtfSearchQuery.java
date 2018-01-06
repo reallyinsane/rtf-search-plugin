@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IResourceVisitor;
@@ -79,11 +78,7 @@ public class RtfSearchQuery implements ISearchQuery {
     File[] files = directory.listFiles(new FileFilter() {
 
       public boolean accept(File file) {
-        if (file.isDirectory()) {
-          return true;
-        } else {
-          return file.getName().toLowerCase().endsWith(".rtf");
-        }
+        return file.isDirectory() || file.getName().toLowerCase().endsWith(".rtf");
       }
     });
     if (files != null) {
@@ -115,8 +110,8 @@ public class RtfSearchQuery implements ISearchQuery {
     }
   }
 
-  private static final String[] REGEX_TO_REPLACE = { "\\{", "\\}",
-      "\\\\[a-zA-Z0-9]*", "\\s+" };
+  private static final String[] REGEX_TO_REPLACE = {"\\{", "\\}",
+      "\\\\[a-zA-Z0-9]*", "\\s+"};
 
   private List<String> findMatches(InputStream in) throws IOException {
     List<String> matches = new ArrayList<String>();
@@ -159,6 +154,7 @@ public class RtfSearchQuery implements ISearchQuery {
   }
 
   static class RtfResourceVisitor implements IResourceVisitor {
+
     private List<IFile> files;
 
     RtfResourceVisitor(List<IFile> files) {

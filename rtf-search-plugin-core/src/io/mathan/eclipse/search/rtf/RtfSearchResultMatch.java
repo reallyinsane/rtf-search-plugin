@@ -8,8 +8,7 @@ public class RtfSearchResultMatch {
   private final RtfSearchResultMatchAccessor accessor;
   private final List<String> matchContexts;
 
-  public RtfSearchResultMatch(String name,
-      RtfSearchResultMatchAccessor accessor, List<String> matchContexts) {
+  public RtfSearchResultMatch(String name, RtfSearchResultMatchAccessor accessor, List<String> matchContexts) {
     this.name = name;
     this.accessor = accessor;
     this.matchContexts = matchContexts;
